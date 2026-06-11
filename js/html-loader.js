@@ -1,7 +1,8 @@
 async function loadComponent(id, path) {
-    const respone = await fetch(path);
-    const text = await respone.text();
-    document.getElementById(id).innerHTML = text;
+    const response = await fetch(path);
+    const text = await response.text();
+    const item = document.getElementById(id);
+    item.innerHTML = text;
 }
 
 function setHighlight(){
@@ -11,11 +12,6 @@ function setHighlight(){
     console.log("start", navs.length);
 
     navs.forEach(nav => {
-        console.log("==== CHECK ====");
-        console.log(nav.dataset.page, currentUrl);
-        console.log(typeof nav.dataset.page, typeof currentUrl);
-        console.log(nav.dataset.page === currentUrl);
-
         if (nav.dataset.page == currentUrl) nav.classList.add("selected-nav");
         else nav.classList.remove("selected-nav");
     })
