@@ -85,7 +85,8 @@ body {
     align-self: center;
     justify-content: space-evenly;
     border-radius: 0 0 100px 100px;
-    width: 650px;
+    width: 100%;
+    max-width: 650px;
     height: 60px;
 }
 
@@ -183,9 +184,9 @@ body {
 
 .albums-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
     width: 100%;
-    gap: 64px;
     margin-top: 20px;
 }
 
@@ -198,7 +199,8 @@ body {
 }
 
 .album-image {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     border-radius: 48px;
 }
 
@@ -226,18 +228,6 @@ body {
 
 /* Adaptive */
 
-@media (max-width: 1600px) { /*Albums Grid*/
-    .albums-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 48px;
-    }
-
-    .album-image {
-        width: 380px;
-        border-radius: 60px;
-    }
-}
-
 @media (max-width: 1200px) { /*Tablet*/
     .section-margin {
         margin: 0px 60px;
@@ -245,11 +235,6 @@ body {
 
     .section-header-margin {
         margin: 0px 60px;
-    }
-
-    .album-image {
-        width: 320px;
-        border-radius: 60px;
     }
 }
 
@@ -260,11 +245,6 @@ body {
 
     .section-header-margin {
         margin: 0px 0px;
-    }
-
-    .album-image {
-        width: 260px;
-        border-radius: 60px;
     }
 
     .main-logo {
@@ -303,11 +283,6 @@ body {
     .charts-track-likes {
         font-size: 44px;
         margin-right: 7px;
-    }
-
-    .nav-container {
-        width: 500px;
-        height: 64px;
     }
 
     .nav-item {
@@ -374,11 +349,6 @@ body {
         margin-right: 5px;
     }
 
-    .album-image {
-        width: 200px;
-        border-radius: 45px;
-    }
-
     .footer-section {
         padding: 0px;
         margin: 0px 0px 10px 0px;
@@ -400,23 +370,13 @@ body {
         border-radius: 70px;
     }
 
-    .album-image {
-        width: 140px;
-        border-radius: 37px;
-    }
-
-    .nav-container {
-        width: 400px;
-        height: 48px;
-    }
-
     .nav-item {
-        font-size: 24px;
+        font-size: 28px;
     }
 
     .underline {
-        width: 70px;
-        height: 2px;
+        width: 82px;
+        height: 3px;
     }
 }
 
@@ -434,13 +394,8 @@ body {
         border-radius: 50px;
     }
 
-    .album-image {
-        width: 130px;
-        border-radius: 30px;
-    }
-
     .header {
-        height: 48px;
+        height: 52px;
     }
 
     .section-title {
@@ -458,21 +413,21 @@ body {
     }
 
     .charts-track-text {
-        font-size: 20px;
+        font-size: 24px;
         margin-left: 12px;
     }
 
     .chart-track-img {
-        width: 30px;
+        width: 40px;
         border-radius: 12px;
     }
 
     .text-title {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .text-author {
-        font-size: 10px;
+        font-size: 16px;
     }
 
     .charts-track-likes {
@@ -484,16 +439,6 @@ body {
         font-size: 16px;
     }
 
-    .albums-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 22px;
-    }
-
-    .nav-container {
-        width: 300px;
-        height: 38px;
-    }
-
     .nav-item {
         font-size: 18px;
     }
@@ -501,5 +446,9 @@ body {
     .underline {
         width: 40px;
         height: 2px;
+    }
+
+    .nav-container {
+        height: 42px;
     }
 }
