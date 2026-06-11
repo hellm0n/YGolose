@@ -5,28 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module" src="js/index.js"></script>
     <link rel="stylesheet" href="./styles/style.css">
+    <script src="./js/html-loader.js"></script>
     <title>YGolose</title>
 </head>
 <body>
-    <header class="section sticky section-header-margin">
-        <div class="header shadow">
-            <a href="" class="header-title">YGolose</a>
-        </div>
-        <nav class="nav-container shadow">
-            <a href="" class="nav-item">
-                <div class="text-nav">Главная</div>
-                <div class="underline orange"></div>
-            </a>
-            <a href="" class="nav-item">
-                <div class="text-nav">Альбомы</div>
-                <div class="underline orange"></div>
-            </a>
-            <a href="" class="nav-item">
-                <div class="text-nav">Синглы</div>
-                <div class="underline orange"></div>
-            </a>
-        </nav>
-    </header>
+    <header class="section sticky section-header-margin" id="place-header"></header>
 
     <main class="section section-padding section-margin">
         <img src="assets/main-logo.png" alt="main-logo" class="main-logo">
@@ -136,11 +119,6 @@
         </div>
     </template>
 
-    <footer class="section section-margin section-footer-padding">
-        <div class="footer-section">
-            <div class="text-title">YGolose</div>
-            <div class="text-footer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, adipisci.</div>
-        </div>
-    </footer>
+    <footer class="section section-margin section-footer-padding" id="place-footer"></footer>
 </body>
 </html>
