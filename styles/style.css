@@ -25,7 +25,6 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    
 }
 
 .shadow {
@@ -42,6 +41,18 @@ body {
 
 .section-header-margin {
     margin: 0px 120px;
+}
+
+.section-footer-padding {
+    padding: 20px 20px;
+}
+
+.section-title {
+    color: white;
+    font-style: italic;
+    font-size: 96px;
+    font-weight: 100;
+    align-self: flex-start;
 }
 
 /* Header */
@@ -110,7 +121,7 @@ body {
 
 .text-main {
     margin-top: 52px;
-    width: 768px;
+    max-width: 768px;
     font-weight: 300;
     font-size: 56px;
     color: white;
@@ -118,14 +129,6 @@ body {
 }
 
 /* Charts */
-
-.section-title {
-    color: white;
-    font-style: italic;
-    font-size: 96px;
-    font-weight: 100;
-    align-self: flex-start;
-}
 
 .charts-container {
     display: flex;
@@ -146,10 +149,6 @@ body {
     border-radius: 48px;
     align-items: center;
     gap: 32px;
-}
-
-.chart-track:hover {
-    background-color: var(--charts-selected-item-color);
 }
 
 .charts-track-text {
@@ -207,13 +206,11 @@ body {
 
 .footer-section {
     background-color: var(--footer-color);
-    width: 100%;
     border-radius: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-    margin: -30px;
+    padding: 30px;
 }
 
 .text-footer {
@@ -230,16 +227,19 @@ body {
 
 /* Adaptive */
 
-@media (max-width: 1400px){
+@media (max-width: 1600px) { /*Albums Grid*/
     .albums-container {
         grid-template-columns: repeat(2, 1fr);
+        gap: 48px;
     }
 
     .album-image {
-        width: 420px;
+        width: 380px;
         border-radius: 60px;
     }
+}
 
+@media (max-width: 1200px) { /*Tablet*/
     .section-margin {
         margin: 0px 60px;
     }
@@ -247,9 +247,14 @@ body {
     .section-header-margin {
         margin: 0px 60px;
     }
+
+    .album-image {
+        width: 320px;
+        border-radius: 60px;
+    }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) { /*Mini Tablet*/
     .section-margin {
         margin: 0px 30px;
     }
@@ -262,7 +267,205 @@ body {
         display: none;
     }
 
+    .album-image {
+        width: 260px;
+        border-radius: 60px;
+    }
+
+    .main-logo {
+        width: 420px;
+        border-radius: 96px;
+    }
+
+    .text-main {
+        font-size: 36px;
+    }
+
+    .charts-track {
+        padding: 6px;
+        gap: 24px;
+        border-radius: 32px;
+    }
+
+    .charts-track-text {
+        font-size: 52px;
+        margin-left: 16px;
+    }
+
+    .chart-track-img {
+        width: 80px;
+        border-radius: 32px;
+    }
+
+    .text-title {
+        font-size: 42px;
+    }
+
+    .text-author {
+        font-size: 24px;
+    }
+
+    .charts-track-likes {
+        font-size: 50px;
+        margin-right: 7px;
+    }
+}
+
+@media (max-width: 768px) { /*Big Phones*/
+    .text-footer {
+        font-size: 20px;
+    }
+
+    .section-margin {
+        margin: 0px 30px;
+    }
+
+    .section-header-margin {
+        margin: 0px 0px;
+    }
+
+    .nav-container{
+        display: none;
+    }
+
+    .main-logo {
+        width: 240px;
+        border-radius: 64px;
+    }
+
+    .text-main {
+        font-size: 24px;
+    }
+
+    .header-title {
+        font-size: 36px;
+    }
+
+    .header {
+        height: 50px;
+    }
+
+    .section-title {
+        font-size: 60px;
+    }
+
+    .charts-container {
+        gap: 8px;
+    }
+
+    .charts-track {
+        padding: 4px;
+        gap: 10px;
+        border-radius: 26px;
+    }
+
+    .charts-track-text {
+        font-size: 24px;
+        margin-left: 12px;
+    }
+
+    .chart-track-img {
+        width: 40px;
+        border-radius: 16px;
+    }
+
+    .text-title {
+        font-size: 18px;
+    }
+
+    .text-author {
+        font-size: 12px;
+    }
+
+    .charts-track-likes {
+        font-size: 28px;
+        margin-right: 5px;
+    }
+
+    .album-image {
+        width: 170px;
+        border-radius: 45px;
+    }
+
+    .footer-section {
+        padding: 0px;
+        margin: 0px 0px 10px 0px;
+        padding: 0px 0px 0px 0px;
+    }
+}
+
+@media (max-width: 500px) {
+    .section-margin {
+        margin: 0px 20px;
+    }
+
+    .album-image {
+        width: 140px;
+        border-radius: 37px;
+    }
+}
+
+@media (max-width: 430px) { /*Phones*/
+    .section-margin {
+        margin: 0px 10px;
+    }
+
+    .nav-container{
+        display: none;
+    }
+
+    .album-image {
+        width: 130px;
+        border-radius: 30px;
+    }
+
+    .header {
+        height: 40px;
+    }
+
+    .section-title {
+        font-size: 40px;
+    }
+
+    .charts-container {
+        gap: 6px;
+    }
+
+    .charts-track {
+        padding: 4px;
+        gap: 10px;
+        border-radius: 26px;
+    }
+
+    .charts-track-text {
+        font-size: 20px;
+        margin-left: 12px;
+    }
+
+    .chart-track-img {
+        width: 30px;
+        border-radius: 12px;
+    }
+
+    .text-title {
+        font-size: 16px;
+    }
+
+    .text-author {
+        font-size: 10px;
+    }
+
+    .charts-track-likes {
+        font-size: 24px;
+        margin-right: 4px;
+    }
+
+    .text-footer {
+        font-size: 16px;
+    }
+
     .albums-container {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
     }
 }
