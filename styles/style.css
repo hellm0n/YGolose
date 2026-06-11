@@ -174,7 +174,7 @@ body {
 
 .charts-track-likes {
     color: white;
-    font-size: 72px;
+    font-size: 64px;
     margin-left: auto;
     margin-right: 10px;
 }
@@ -210,7 +210,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px;
 }
 
 .text-footer {
@@ -263,10 +262,6 @@ body {
         margin: 0px 0px;
     }
 
-    .nav-container{
-        display: none;
-    }
-
     .album-image {
         width: 260px;
         border-radius: 60px;
@@ -309,6 +304,21 @@ body {
         font-size: 50px;
         margin-right: 7px;
     }
+
+    .nav-container {
+        width: 450px;
+        height: 42px;
+    }
+
+    .nav-item {
+        font-size: 24px;
+    }
+
+    .underline {
+        width: 72px;
+        height: 3px;
+        border-radius: 3px;
+    }
 }
 
 @media (max-width: 768px) { /*Big Phones*/
@@ -324,12 +334,8 @@ body {
         margin: 0px 0px;
     }
 
-    .nav-container{
-        display: none;
-    }
-
     .main-logo {
-        width: 240px;
+        width: 260px;
         border-radius: 64px;
     }
 
@@ -392,6 +398,20 @@ body {
         margin: 0px 0px 10px 0px;
         padding: 0px 0px 0px 0px;
     }
+
+    .nav-container {
+        width: 350px;
+        height: 32px;
+    }
+
+    .nav-item {
+        font-size: 18px;
+    }
+
+    .underline {
+        width: 52px;
+        height: 2px;
+    }
 }
 
 @media (max-width: 500px) {
@@ -403,15 +423,25 @@ body {
         width: 140px;
         border-radius: 37px;
     }
+
+    .nav-container {
+        width: 320px;
+        height: 30px;
+    }
+
+    .nav-item {
+        font-size: 16px;
+    }
+
+    .underline {
+        width: 50px;
+        height: 2px;
+    }
 }
 
 @media (max-width: 430px) { /*Phones*/
     .section-margin {
         margin: 0px 10px;
-    }
-
-    .nav-container{
-        display: none;
     }
 
     .album-image {
@@ -467,5 +497,19 @@ body {
     .albums-container {
         grid-template-columns: repeat(2, 1fr);
         gap: 22px;
+    }
+
+    .nav-container {
+        width: 240px;
+        height: 26px;
+    }
+
+    .nav-item {
+        font-size: 12px;
+    }
+
+    .underline {
+        width: 40px;
+        height: 2px;
     }
 }
